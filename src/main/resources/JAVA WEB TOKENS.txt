@@ -1,0 +1,51 @@
+_______________________________________________
+________________JAVA WEB TOKENS________________
+_______________________________________________
+   
+1.  SIGN UP ( http://localhost:8080/api/auth/signup )
+	Parameters:
+	
+	{
+		"name":"praveenkumar",
+		"username":"praveenkumar",
+		"email":"praveen.kuymar@bcits.in",
+		"role":["user","pm"],
+		"password":"praveenkumar"
+	}
+	
+	Response : User registered successfully!
+	
+2.  SIGN IN ( http://localhost:8080/api/auth/signin )
+	Parameters:
+
+	{
+		"username":"praveenkumar",
+		"password":"praveenkumar"
+	}
+	
+	Response :
+	{
+		"accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwcmF2ZWVua3VtYXIiLCJpYXQiOjE1NTM4NjUzOTQsImV4cCI6MTU1Mzg2NTY5NH0.PlpaFPTf3dLrFqabH21b-nRhX1cniFYlwbABvZWKJYt-pmpB_pwqDIRslukzGQHWrlm1FxxtLbaKU1BOem6vbA",
+		"tokenType": "Bearer"
+	}
+	
+3.  Accessing API  
+	http://localhost:8080/api/test/user
+	== Add in Header ==
+	Key : Authorization 
+	Value : eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwcmF2ZWVua3VtYXIiLCJpYXQiOjE1NTM4NjUzOTQsImV4cCI6MTU1Mzg2NTY5NH0.PlpaFPTf3dLrFqabH21b-nRhX1cniFYlwbABvZWKJYt-pmpB_pwqDIRslukzGQHWrlm1FxxtLbaKU1BOem6vbA
+	
+	Response : >>> User Contents!
+	
+	
+4. http://192.168.2.156:8080/jvvnl/validationService/SBI
+	Authorization	Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYW1uYXJheWFuIiwiaWF0IjoxNTU0Mjk1Njc5LCJleHAiOjE1NTQyOTU5Nzl9.YH2eu0UzANwiAPj3JhpgsO_CSpD2Z0EXMqD29aKxxBHmBWvX57mGXB2DxQC0QVzikAOKqvdGEPJeEcRti2S-bQ
+{
+    "validate": {
+        "customer_code": "JDBNN1",
+        "bene_account_no": "JDBNN1210553000338",
+        "transfer_unique_no": "20SEPT2018CHECK",
+        "transfer_amt": "2449369"
+    }
+}
+	
